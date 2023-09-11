@@ -30,7 +30,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and().formLogin();
     }
 
-    @Bean
+    @SuppressWarnings("deprecation")
+	@Bean
     public PasswordEncoder getPasswordEncoder() {
         return NoOpPasswordEncoder.getInstance();
     }
